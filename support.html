@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート | ふたもち</title>
+<meta name="description" content="ふたもちのサポートページです。iCloud、パートナー連携、機種変更、ウィジェット、らくがき、プレミアム、解約・返金、データの削除などのよくある質問と、お問い合わせ先をまとめています。">
+
+<style>
+  :root {
+    --bg: #F4F3F1;
+    --card: #FFFFFF;
+    --text: #111114;
+    --muted: #6B6A73;
+    --line: #E9E7E3;
+    --accent: #FF6B1A;
+    --accent-text: #C94A08;
+    --sky: #8FCBFF;
+    --lime: #E8FF4D;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111114;
+      --card: #1E1E23;
+      --text: #F4F3F1;
+      --muted: #BDBCC1;
+      --line: #2C2C33;
+      --accent-text: #FF8C4B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111114;
+    --card: #1E1E23;
+    --text: #F4F3F1;
+    --muted: #BDBCC1;
+    --line: #2C2C33;
+    --accent-text: #FF8C4B;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header.site { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  header.site .logo { width: 44px; height: 44px; flex: none; }
+  header.site a { color: inherit; text-decoration: none; font-weight: 800; font-size: 18px; }
+  h1 { font-size: 32px; line-height: 1.3; font-weight: 900; margin: 0 0 8px; letter-spacing: 0.01em; }
+  .lead { color: var(--muted); margin: 0 0 28px; }
+  .card { background: var(--card); border-radius: 28px; padding: 28px 24px; margin-bottom: 20px; }
+  h2 { font-size: 20px; font-weight: 900; margin: 0 0 12px; line-height: 1.4; }
+  h2 .num { display: inline-block; min-width: 2em; color: var(--accent-text); }
+  h3 { font-size: 16px; font-weight: 800; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.4em; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 800; white-space: nowrap; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-scroll table { min-width: 520px; }
+  .note { background: color-mix(in srgb, var(--sky) 22%, transparent); border-radius: 18px; padding: 14px 16px; margin: 12px 0; }
+  .toc { columns: 2; column-gap: 24px; padding-left: 1.2em; }
+  .toc li { break-inside: avoid; }
+  a { color: var(--accent-text); }
+  footer { color: var(--muted); font-size: 14px; margin-top: 32px; text-align: center; }
+  footer nav a { display: inline-block; margin: 0 8px 6px; }
+  @media (max-width: 520px) {
+    h1 { font-size: 26px; }
+    .card { padding: 22px 18px; border-radius: 24px; }
+    .toc { columns: 1; }
+  }
+</style>
+<style>
+  details { border-bottom: 1px solid var(--line); padding: 4px 0; }
+  details:last-child { border-bottom: none; }
+  summary {
+    cursor: pointer; list-style: none; font-weight: 800; padding: 12px 36px 12px 0; position: relative; line-height: 1.6;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; position: absolute; right: 4px; top: 8px; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--lime); color: #111114; font-weight: 900; text-align: center; line-height: 28px;
+  }
+  details[open] summary::after { content: "−"; }
+  details > div { padding: 0 0 14px; }
+  .contact {
+    background: #111114; color: #F4F3F1; border-radius: 28px; padding: 28px 24px; margin-bottom: 20px;
+  }
+  .contact h2 { color: #FFFFFF; }
+  .contact a.button {
+    display: inline-block; background: var(--lime); color: #111114; font-weight: 900; text-decoration: none;
+    border-radius: 999px; padding: 14px 24px; margin: 8px 0 12px; min-height: 44px;
+  }
+  .contact .small { color: #BDBCC1; font-size: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+  .chips a {
+    display: inline-block; background: var(--card); border-radius: 999px; padding: 8px 14px; text-decoration: none;
+    color: var(--text); font-weight: 700; font-size: 14px;
+  }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 36px; margin-bottom: 10px; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--accent); color: #FFFFFF; font-weight: 900; font-size: 13px; text-align: center; line-height: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <svg class="logo" viewBox="0 0 44 44" aria-hidden="true">
+      <ellipse cx="16" cy="25" rx="13" ry="12" fill="#FF6B1A"/>
+      <ellipse cx="28" cy="25" rx="13" ry="12" fill="#8FCBFF"/>
+      <path d="M22 31c-2.5-2-5-3.6-5-6.2 0-1.6 1.2-2.8 2.7-2.8 1 0 1.8.5 2.3 1.3.5-.8 1.3-1.3 2.3-1.3 1.5 0 2.7 1.2 2.7 2.8 0 2.6-2.5 4.2-5 6.2z" fill="#E8FF4D"/>
+      <ellipse cx="11" cy="23" rx="1.4" ry="2.4" fill="#111114"/><ellipse cx="15.5" cy="23" rx="1.4" ry="2.4" fill="#111114"/>
+      <ellipse cx="29" cy="23" rx="1.4" ry="2.4" fill="#111114"/><ellipse cx="33.5" cy="23" rx="1.4" ry="2.4" fill="#111114"/>
+    </svg>
+    <a href="support.html">ふたもち</a>
+  </header>
+
+  <h1>サポート</h1>
+  <p class="lead">「ふたもち」を使ってくれてありがとうございます。困ったときは、まずここのよくある質問を見てみてください。解決しないときは、いちばん下のお問い合わせからどうぞ。</p>
+
+  <ul class="chips" aria-label="カテゴリ">
+    <li><a href="#start">はじめに・iCloud</a></li>
+    <li><a href="#pair">パートナー連携</a></li>
+    <li><a href="#device">機種変更</a></li>
+    <li><a href="#widget">ウィジェット・らくがき</a></li>
+    <li><a href="#features">機能</a></li>
+    <li><a href="#premium">プレミアム・解約・返金</a></li>
+    <li><a href="#data">データの削除・書き出し</a></li>
+    <li><a href="#privacy">プライバシー・安全</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+
+  <div class="card" id="start">
+    <h2>はじめに・iCloud</h2>
+    <details>
+      <summary>アカウントの登録やログインは必要？</summary>
+      <div><p>必要ありません。ふたもちは、iPhoneでサインインしているiCloud（Apple ID）を使ってデータを保存します。パスワードを決めたり、メールアドレスを登録したりする必要はありません。</p></div>
+    </details>
+    <details>
+      <summary>データはどこに保存されるの？</summary>
+      <div>
+        <p>写真、らくがき、答え、思い出などは、<strong>あなた自身のiCloud</strong>に保存され、連携したパートナーとだけ共有されます。運営者のサーバーには保存しません。運営者がその中身を見ることもできません。</p>
+        <p>通知や「いっしょにらくがき」の線のように、運営者の中継サーバーを通るものも、ふたりのiPhoneだけが持つ鍵で暗号化してから送るので、運営者は読めません。</p>
+        <p>くわしくは<a href="privacy_policy.html#s2">プライバシーポリシー</a>をご覧ください。</p>
+      </div>
+    </details>
+    <details>
+      <summary>「iCloudにサインインしてください」と表示される</summary>
+      <div>
+        <p>ふたもちを使うには、iCloudへのサインインが必要です。</p>
+        <ol class="steps">
+          <li>iPhoneの「設定」アプリを開き、いちばん上の「Apple Account」（または「iPhoneにサインイン」）からサインインします。</li>
+          <li>サインイン後、「設定」→［ユーザ名］→「iCloud」で、iCloudが使える状態になっているか確認します。</li>
+          <li>ふたもちに戻ると、自動で続きから始まります。</li>
+        </ol>
+        <p>サインインしているのに表示される場合は、iPhoneを再起動するか、「設定」→［ユーザ名］→「iCloud」の「iCloudを使用しているApp」（表示はiOSによって少し違います）でふたもちがオフになっていないか確認してください。</p>
+        <p>iCloudにサインインしていなくても、案内の画面の［iCloudなしでデモを見る］から、デモのパートナーとアプリの雰囲気を試せます。</p>
+      </div>
+    </details>
+    <details>
+      <summary>iCloudの容量がいっぱいと表示される</summary>
+      <div>
+        <p>ふたもちのデータは、あなたのiCloudの容量を使います。容量がいっぱいになると、新しい写真やらくがきを保存・送信できなくなります（すでにあるデータは消えません）。</p>
+        <ul>
+          <li>「設定」→［ユーザ名］→「iCloud」→「ストレージ」で、何が容量を使っているか確認し、不要な写真やバックアップを削除する</li>
+          <li>iCloud+で容量を増やす（無料で使えるのは5GBまでです）</li>
+        </ul>
+        <p>くわしくは、Appleの「<a href="https://support.apple.com/ja-jp/108922" target="_blank" rel="noopener">Apple製デバイスでiCloudストレージを管理する</a>」をご覧ください。空きができたら、保存できなかったものは自動で送り直されます。</p>
+      </div>
+    </details>
+    <details>
+      <summary>iCloudの容量はどれくらい使う？</summary>
+      <div><p>写真は、保存する前にアプリが小さくしてから保存するので、1枚あたり数百KB程度です（元の写真より、ずっと小さくなります）。文章や答えは、ごくわずかです。あなたが作ったものはあなたのiCloudに、パートナーが作ったものはパートナーのiCloudに保存されるので、相手の写真であなたの容量が減ることはありません。</p></div>
+    </details>
+    <details>
+      <summary>パートナーがAndroidでも使える？</summary>
+      <div><p>ごめんなさい、使えません。ふたもちはiPhone専用で、データの保存と共有にiCloudを使うため、<strong>ふたりともiPhoneと、それぞれのApple IDでのiCloudへのサインイン</strong>が必要です。Androidやウェブ版の予定は、いまのところありません。</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="pair">
+    <h2>パートナー連携</h2>
+    <details>
+      <summary>パートナーと連携するには？</summary>
+      <div>
+        <ol class="steps">
+          <li>どちらかが、ホームの「パートナーを招待」を開きます。</li>
+          <li>「LINEで送る」「リンクをコピー」「QRコード」「AirDrop」のどれかで、招待のリンクをパートナーに送ります。</li>
+          <li>パートナーはアプリを入れてから、リンクを開きます（QRコードは、iPhoneのカメラで読み取ります）。「参加する」をタップすると、ふたりがつながります。</li>
+        </ol>
+        <p>つながるまで、数秒から1分ほどかかることがあります。招待のリンクは、連携したい相手にだけ送ってください。</p>
+      </div>
+    </details>
+    <details>
+      <summary>招待のリンクを開いても、つながらない</summary>
+      <div>
+        <ul>
+          <li>先にApp Storeからふたもちを入れてから、もう一度リンクを開いてください。</li>
+          <li>ふたりとも、iCloudにサインインしているか確認してください。</li>
+          <li><strong>ふたりが同じApple IDを使っていると、連携できません。</strong>それぞれ自分のApple IDでサインインしたiPhoneが必要です。</li>
+          <li>リンクがすでに使われた場合や、相手がほかの人と連携している場合は、連携できません。「パートナーを招待」を開き直して、新しいリンクを送ってください。</li>
+          <li>アプリを最新のバージョンにアップデートしてください。</li>
+          <li>通信が不安定な場合は、電波のよいところでもう一度試してください。</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>パートナーがいなくても使える？</summary>
+      <div><p>招待の画面の［パートナーなしで試す（デモ）］から、デモのパートナーと一緒に、ふたもちの雰囲気を試せます。質問・らくがき・ふたりログなどのプレミアムの機能は、年額プランの7日間の無料トライアル中などに使えます。デモのデータはiPhoneの中だけで動き、本当のパートナーと連携すると消えます。</p></div>
+    </details>
+    <details>
+      <summary>連携を解除するには？解除するとどうなる？</summary>
+      <div>
+        <p>設定 ＞「パートナー連携を解除」から解除できます。相手の同意はいりません。解除すると、その時点からおたがいの共有が止まります。</p>
+        <ul>
+          <li>あなたが作ったものは、あなたのiCloudに残り、あなただけが「以前のきろく」として見られます（不要なら削除できます）。</li>
+          <li>パートナーが作ったものは、あなたには表示されなくなります。</li>
+          <li>あなたの位置情報は、すぐに削除されます。</li>
+          <li>相手に通知は送りません。相手が次にアプリを開いたときに表示されます。</li>
+          <li>同じふたりでつながり直すと、それぞれのiCloudに残っているきろくが、また共有されます。</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="card" id="device">
+    <h2>機種変更</h2>
+    <details>
+      <summary>機種変更するときは、何をすればいい？</summary>
+      <div>
+        <p><strong>特別な準備はいりません。</strong>新しいiPhoneで、前と<strong>同じApple ID</strong>でiCloudにサインインし、ふたもちを入れて開くだけで、データが自動で戻ります。パートナーとの連携もそのままです。</p>
+        <p>文章や答えなどは、iCloudキーチェーンの鍵で暗号化して保存しています。新しいiPhoneでも<strong>iCloudキーチェーンをオン</strong>にしてください（「設定」→［ユーザ名］→「iCloud」→「パスワードとキーチェーン」。表記はiOSによって少し違います）。</p>
+        <p>写真が多い場合は、すべて表示されるまで少し時間がかかります。Wi-Fiにつないでおくとスムーズです。</p>
+        <p>iPhoneでは、iCloud（データ）とApp Store（購入）に別々のApple IDを使うこともできます。新しいiPhoneでは、<strong>iCloudとApp Storeの両方</strong>に、前と同じApple IDでサインインしてください。</p>
+      </div>
+    </details>
+    <details>
+      <summary>機種変更したら、写真はあるのに文章や答えが出ない</summary>
+      <div>
+        <p>文章・答え・位置・らくがきの線などは、iCloudキーチェーンの鍵で暗号化しているため、新しいiPhoneでiCloudキーチェーンが使えるようになるまで表示されません。次の順で確認してください。</p>
+        <ol class="steps">
+          <li>新しいiPhoneで、iPhoneにサインインするときに<strong>前のiPhoneのパスコード</strong>を求められたら入力します（iCloudキーチェーンの鍵を引き継ぐために使われます）。</li>
+          <li>「設定」→［ユーザ名］→「iCloud」で、<strong>iCloudキーチェーン（パスワードとキーチェーン）をオン</strong>にします。</li>
+          <li>ふたもちを一度閉じて、開き直します。</li>
+        </ol>
+        <p><strong>ご注意</strong>: Appleアカウントの復旧でエンドツーエンド暗号化のデータをリセットすると、これらは読み出せなくなり、Appleも運営者も復元できません。アカウントの復旧をする前に、できれば前のiPhoneで、設定 ＞「データの書き出し」で保存しておいてください。</p>
+      </div>
+    </details>
+    <details>
+      <summary>別のApple IDに変えたら、データが表示されない</summary>
+      <div><p>データはApple IDごとのiCloudに保存されているため、別のApple IDには移せません。前のApple IDでサインインし直すと、データが表示されます。</p></div>
+    </details>
+    <details>
+      <summary>機種変更したら、プレミアムが使えなくなった</summary>
+      <div>
+        <ul>
+          <li>あなたが購入した場合: 設定 ＞「購入を復元」をタップしてください。購入したときと同じApple Accountで、App Storeにサインインしている必要があります。</li>
+          <li>パートナーが購入した場合: パートナーとの連携が戻ると、自動でまた適用されます。しばらくたっても戻らないときは、パートナーにアプリを一度開いてもらってください。</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="card" id="widget">
+    <h2>ウィジェット・らくがき・ライブアクティビティ</h2>
+    <details>
+      <summary>ホーム画面にウィジェットを追加するには？</summary>
+      <div>
+        <ol class="steps">
+          <li>ホーム画面の何もないところを長押しします。</li>
+          <li>左上の「編集」→「ウィジェットを追加」をタップします。</li>
+          <li>「ふたもち」を検索して、好きなウィジェットとサイズを選び、「ウィジェットを追加」をタップします。</li>
+        </ol>
+        <p>アプリのマイページ ＞「ウィジェット」でも、動きつきで説明しています。</p>
+      </div>
+    </details>
+    <details>
+      <summary>ロック画面にウィジェットを追加するには？</summary>
+      <div>
+        <ol class="steps">
+          <li>ロック画面を長押しして、「カスタマイズ」→「ロック画面」を選びます。</li>
+          <li>時計の下（または上）の枠をタップし、「ふたもち」のウィジェットを選びます。</li>
+        </ol>
+        <p>ロック画面のウィジェットは、iOSの仕様で単色で表示されます。カラーのらくがきは、ホーム画面のウィジェットで見られます。</p>
+      </div>
+    </details>
+    <details>
+      <summary>ウィジェットがすぐに更新されない</summary>
+      <div>
+        <p>ウィジェットの更新回数は、電池を守るためにiOSが調整しているので、届くまでに少し時間がかかることがあります。次のことを試してみてください。</p>
+        <ul>
+          <li>アプリを一度開く（開くと最新の状態に更新されます）</li>
+          <li>「設定」アプリ ＞ 通知 ＞「ふたもち」で通知を許可する（通知が届いたタイミングでウィジェットも更新されます）</li>
+          <li>低電力モードをオフにする</li>
+          <li>「設定」アプリ ＞ 一般 ＞「Appのバックグラウンド更新」をオンにする</li>
+          <li>それでも直らないときは、ウィジェットを一度削除して追加し直す</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>らくがきを相手のロック画面の壁紙に直接設定できないの？</summary>
+      <div>
+        <p>iOSでは、アプリが壁紙を直接変えることはできません。そのかわり、次の方法で、らくがきをロック画面に表示できます。</p>
+        <ul>
+          <li><strong>ロック画面のウィジェット</strong>: 届いたらくがきが表示されます。</li>
+          <li><strong>いっしょにらくがきタイム</strong>: 始めているあいだは、ロック画面とダイナミックアイランドに、相手のらくがきがカラーで表示されます。</li>
+          <li><strong>壁紙の書き出し</strong>: らくがきと写真をiPhoneの壁紙サイズで書き出して、写真に保存できます。ショートカットアプリの「壁紙を設定」と組み合わせると、最新のらくがきを壁紙にする操作を自動化できます。</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>ロック画面（ライブアクティビティ）にらくがきが出ない</summary>
+      <div>
+        <ul>
+          <li>ロック画面とダイナミックアイランドにらくがきが出るのは、<strong>「いっしょにらくがきタイム」を始めているあいだだけ</strong>です。＋ボタン ＞「らくがきを送る」＞「いっしょにらくがきタイムを始める」から、時間を選んで始めてください（最長8時間）。</li>
+          <li>「設定」アプリ ＞「ふたもち」＞「ライブアクティビティ」がオンになっているか確認してください。</li>
+          <li>終わったあとに届いたらくがきは、ウィジェットとアプリで見られます。</li>
+          <li>ダイナミックアイランドの表示は、対応しているiPhoneだけです。</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>アプリを開かずに「会いたい」を送るには？</summary>
+      <div><p>ホーム画面に「パートナーの気分」ウィジェットを置くと、ボタンをタップするだけで、アプリを開かずに「会いたい」などを送れます。iOS 18以降では、コントロールセンターに「気持ちを送る」を追加することもできます。iPhoneがロックされているときは、ロックを解除してから送られます。</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="features">
+    <h2>機能について</h2>
+    <details>
+      <summary>付き合って何日目の数え方は？</summary>
+      <div><p>初期設定では、付き合った日を「1日目」として数えます。マイページ ＞ ふたりの設定で、「0日目から数える」に変えられます。100日ごと、◯ヶ月、◯周年の記念日は自動で計算して、お知らせします。</p></div>
+    </details>
+    <details>
+      <summary>今日の質問で、相手の答えが見られない</summary>
+      <div><p>相手の答えは、<strong>自分も同じ質問に答えたあと</strong>に見られるしくみです。相手がまだ答えていない場合は、答えたときに通知でお知らせします。</p></div>
+    </details>
+    <details>
+      <summary>ふたりログの「1日」はいつ切り替わる？</summary>
+      <div><p>夜ふかしした日も1日として残せるように、ふたりログの1日は<strong>午前4時から翌日の午前4時まで</strong>です。</p></div>
+    </details>
+    <details>
+      <summary>ふたりの距離が表示されない</summary>
+      <div>
+        <ul>
+          <li>ふたりとも、設定 ＞「位置情報の共有」をオンにする必要があります（初期設定はオフです）。</li>
+          <li>「設定」アプリ ＞「ふたもち」＞ 位置情報 で「このAppの使用中」を選んでください。</li>
+          <li>最後に位置を更新してから24時間以上たつと、「最近の位置がありません」と表示されます。アプリを開くと更新されます。</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>「ちょっと大人な話」が出てこない</summary>
+      <div><p>このカテゴリは初期設定でオフです。<strong>ふたりとも</strong>18歳以上で、それぞれが設定 ＞「ちょっと大人な話」で年齢を確認してオンにしたときだけ表示されます。今日の質問や通知には出ません。</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="premium">
+    <h2>プレミアム・解約・返金</h2>
+    <details>
+      <summary>プレミアムがないと使えないの？</summary>
+      <div><p>ふたもちの機能の多くは、プレミアム（有料）で使えます。年額プランには7日間の無料トライアルがあるので、まずはためしてみてください（トライアルが終わる24時間前までに解約しないと、自動で年額の有料プランに切り替わります。くわしくは下の「無料トライアルのあとはどうなる？」）。プレミアムがなくても、付き合ってからの日数の表示とそのウィジェット、記念日の一覧、パートナー連携、設定、購入の復元、データの書き出しと削除、お問い合わせは使えます。</p></div>
+    </details>
+    <details>
+      <summary>ひとりが購入すれば、ふたりともプレミアムになる？</summary>
+      <div><p>なります。どちらかひとりが購入すると、連携しているパートナーも追加の料金なしでプレミアムを使えます。パートナーの画面には「（名前）のプレミアムで使っています」と表示されます。連携を解除したときや、購入した人のプレミアムの期間が終わったときは、パートナー側の特典も終わります。</p></div>
+    </details>
+    <details>
+      <summary>パートナーが購入したのに、プレミアムにならない</summary>
+      <div>
+        <ul>
+          <li>ふたりが連携しているか確認してください。</li>
+          <li>パートナーのiPhoneで、アプリを一度開いてもらってください（購入の情報がパートナーのiCloudに保存され、あなたのiPhoneで確認されます）。</li>
+          <li>反映まで、少し時間がかかることがあります。アプリを開き直してみてください。</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>ふたりとも購入してしまった</summary>
+      <div><p>ふたりとも購読していることがわかると、アプリがお知らせします。どちらか一方の自動更新を止めてください（下の「解約するには？」の方法）。止めた側も、いまの期間が終わるまではそのまま使えます。重なって請求された分の返金は、Appleへの申請になります。なお、パートナーがすでにプレミアムのときは、うっかり重ねて購入しないよう、購入の画面は開かないようにしています。</p></div>
+    </details>
+    <details>
+      <summary>無料トライアルのあとはどうなる？</summary>
+      <div><p>無料トライアルが終わると、自動で有料のサブスクリプションに切り替わります。有料に切り替わる日は、購入の画面に表示しています。料金がかからないようにしたい場合は、トライアルが終わる24時間前までに、下の方法で解約してください。解約しても、トライアルの期間が終わるまでは使えます。</p></div>
+    </details>
+    <details>
+      <summary>解約（自動更新を止める）するには？</summary>
+      <div>
+        <ol class="steps">
+          <li>iPhoneの「設定」アプリを開き、いちばん上のユーザ名をタップします。</li>
+          <li>「サブスクリプション」をタップします。</li>
+          <li>「ふたもち」を選び、「サブスクリプションをキャンセル」をタップします。</li>
+        </ol>
+        <p>アプリの設定 ＞［サブスクリプションを管理］からも開けます。現在の期間が終わる24時間前までに解約すると、次の更新はされません。解約しても、期間の終わりまではプレミアムを使えます。<strong>アプリを削除しただけでは解約されません。</strong>パートナーが購入した分は、パートナーのiPhoneで解約します。くわしくは、Appleの「<a href="https://support.apple.com/ja-jp/118428" target="_blank" rel="noopener">Appleのサブスクリプションを解約する</a>」をご覧ください。</p>
+      </div>
+    </details>
+    <details>
+      <summary>返金してほしい</summary>
+      <div>
+        <p>App内課金の代金はAppleが受け取っているため、返金はAppleへの申請になります。運営者からは返金できません。ご了承ください。</p>
+        <p>申請の方法は、Appleの「<a href="https://support.apple.com/ja-jp/118223" target="_blank" rel="noopener">Appleから購入したアプリやコンテンツの返金手続きをする</a>」をご覧ください（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> から申請できます）。</p>
+      </div>
+    </details>
+    <details>
+      <summary>料金や、特定商取引法に基づく表記は？</summary>
+      <div><p>料金は、アプリの購入画面に表示しています（どのプランもふたりで使えます）。販売事業者、支払いの時期、解約の条件などは、<a href="tokushoho.html">特定商取引法に基づく表記</a>にまとめています。</p></div>
+    </details>
+    <details>
+      <summary>「はじめましてギフト」をもう一度見たい</summary>
+      <div><p>はじめましてギフトは、はじめて表示されてから24時間だけの、期間限定の割引プランです。期限が過ぎると、もう一度表示することはできません。ご了承ください。なお、招待を受けて参加した方には表示されません（パートナーが購入すれば、追加の料金なしで使えるためです）。</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="data">
+    <h2>データの削除・書き出し</h2>
+    <details>
+      <summary>データをすべて削除するには？</summary>
+      <div>
+        <p>設定 ＞「すべてのデータを削除」から、あなたのiCloudにあるふたもちのデータを削除できます。</p>
+        <ul>
+          <li>あなたが作った写真、答え、記念日、思い出、コメントなどは、パートナーの画面からも消えます。</li>
+          <li>パートナーとの共有も止まります。</li>
+          <li>元には戻せません。必要なものは、先に「データの書き出し」で保存してください。</li>
+          <li>あなたが購入したプレミアムをパートナーも使っていた場合、パートナーは使えなくなります。</li>
+          <li><strong>データを削除しても、サブスクリプションは解約されません。</strong>先に「解約するには？」の方法で解約してください。</li>
+        </ul>
+        <p>iPhoneの「設定」→［ユーザ名］→「iCloud」→「ストレージ」に「ふたもち」が表示される場合は、そこからも削除できます。</p>
+      </div>
+    </details>
+    <details>
+      <summary>アプリを削除したら、データも消える？</summary>
+      <div><p>消えません。データはあなたのiCloudに残っているので、もう一度入れると戻ります。データも消したい場合は、アプリを削除する前に、設定 ＞「すべてのデータを削除」を行ってください。</p></div>
+    </details>
+    <details>
+      <summary>パートナーが作ったものを削除したい</summary>
+      <div><p>パートナーが作ったものは、パートナーのiCloudにあるため、あなたは削除できません。パートナーに削除をお願いするか、連携を解除すると、あなたには表示されなくなります。</p></div>
+    </details>
+    <details>
+      <summary>データを書き出したい</summary>
+      <div><p>設定 ＞「データの書き出し」から、思い出や答えなどのデータを書き出せます。</p></div>
+    </details>
+    <details>
+      <summary>運営者にデータを復元してもらえる？</summary>
+      <div><p>運営者は、あなたやパートナーのiCloudの中身を見たり、復元したりすることはできません。削除したデータは戻せないので、ご注意ください。</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="privacy">
+    <h2>プライバシー・安全</h2>
+    <details>
+      <summary>投稿した写真や答えは、ほかの人に見られる？</summary>
+      <div><p>ふたもちの中で見られるのは、あなたと連携したパートナーの2人だけです。公開のタイムラインや、知らない人とつながる機能はありません。運営者も中身を見ることはできません。ただし、パートナーはスクリーンショットなどで保存できます。くわしくは<a href="privacy_policy.html">プライバシーポリシー</a>をご覧ください。</p></div>
+    </details>
+    <details>
+      <summary>広告やトラッキングはある？</summary>
+      <div><p>ありません。広告は表示せず、ほかの会社のデータと組み合わせて広告に使うこと（トラッキング）もしません。</p></div>
+    </details>
+    <details>
+      <summary>位置情報を共有すると、相手に何が見える？</summary>
+      <div><p>相手のアプリに表示されるのは、<strong>ふたりの距離と、最後に更新した時刻だけ</strong>です。地図上の場所や、移動の履歴は表示されません。位置は、保存する前にiPhoneの中で丸めます（「おおよそ」なら約100m、それ以外も約10mの細かさ）。共有はいつでもオフにでき、オフにすると保存した位置も削除されます。</p><p>ただし、距離とパートナー自身の位置を組み合わせると、あなたのおおよその場所が推測できる場合があります。気になるときは「おおよそ」を選ぶか、共有をオフにしてください。</p></div>
+    </details>
+    <details>
+      <summary>通知やロック画面に、内容を出したくない</summary>
+      <div>
+        <ul>
+          <li>「設定」アプリ ＞ 通知 ＞「ふたもち」＞「プレビューを表示」を「しない」にすると、通知の文面が隠れます。</li>
+          <li>ロック画面に置いたふたもちのウィジェットは、ロック画面のカスタマイズから外せます。</li>
+          <li>「いっしょにらくがきタイム」は、始めなければロック画面には出ません。始めているときは、アプリの［おわる］でいつでも止められます。</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>パートナーから嫌なことをされた・困っている</summary>
+      <div>
+        <p>設定 ＞「パートナー連携を解除」で、すぐに相手とのつながりを切れます。解除すると、相手からの投稿や通知は届かなくなります。相手に通知は送りません。</p>
+        <p>ふたもちの使い方について運営者に知らせたいことがある場合は、設定 ＞「お問い合わせ・通報」から、または下のメールアドレスにご連絡ください。内容を確認し、利用規約にもとづいて対応します。</p>
+        <div class="note">
+          <p>身の危険を感じるときは、ためらわずに警察（緊急時は110番）に相談してください。警察相談専用電話「#9110」もあります。</p>
+          <p>パートナーからの暴力（DV）に悩んでいるときは、ひとりで抱えこまずに相談してください。</p>
+          <ul>
+            <li>DV相談ナビ: <a href="tel:%238008">#8008</a>（はれれば。お近くの相談窓口につながります）</li>
+            <li>DV相談＋（プラス）: <a href="tel:0120279889">0120-279-889</a>（24時間）</li>
+          </ul>
+          <p>くわしくは、<a href="https://www.gender.go.jp/policy/no_violence/e-vaw/index.html" target="_blank" rel="noopener">内閣府 男女共同参画局「配偶者からの暴力被害者支援情報」</a>をご覧ください。</p>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>お問い合わせ</h2>
+    <p>よくある質問で解決しないときは、メールでお気軽にご連絡ください。アプリの設定 ＞「お問い合わせ・通報」から送ると、iPhoneの機種やアプリのバージョンが自動で入るのでスムーズです。</p>
+    <a class="button" href="mailto:contact@crop.tokyo?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで問い合わせる</a>
+    <p>メールには、できれば次のことを書いてください。</p>
+    <ul>
+      <li>困っていること（いつ、どの画面で、何をしたら、どうなったか）</li>
+      <li>iPhoneの機種とiOSのバージョン</li>
+      <li>アプリのバージョン（マイページのいちばん下に表示されています）</li>
+      <li>画面のスクリーンショット（あれば）</li>
+    </ul>
+    <p class="small">返信までに数日かかることがあります。運営者はあなたのデータを見られないため、メールに書いていただいた内容をもとにお答えします。パスワードやApple Accountの情報、クレジットカードの番号は、メールに書かないでください。運営者からそれらを聞くことはありません。</p>
+    <p class="small">株式会社クロップ（CROP, K.K.）　東京都新宿区新宿5-18-20 ルックハイツ新宿803　<a href="mailto:contact@crop.tokyo" style="color:#E8FF4D">contact@crop.tokyo</a></p>
+  </div>
+
+  <footer>
+    <nav><a href="terms.html">利用規約</a><a href="privacy_policy.html">プライバシーポリシー</a><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="support.html">サポート</a></nav>
+    <p>© 株式会社クロップ（CROP, K.K.）</p>
+  </footer>
+</div>
+</body>
+</html>
