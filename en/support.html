@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support | Futamochi</title>
+<meta name="description" content="Futamochi support. Answers to common questions about iCloud, connecting with your partner, switching iPhones, widgets, doodles, Premium, canceling and refunds, and deleting your data, plus how to contact us.">
+<style>
+  :root {
+    --bg: #F4F3F1;
+    --card: #FFFFFF;
+    --text: #111114;
+    --muted: #6B6A73;
+    --line: #E9E7E3;
+    --accent: #FF6B1A;
+    --accent-text: #C94A08;
+    --sky: #8FCBFF;
+    --lime: #E8FF4D;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111114;
+      --card: #1E1E23;
+      --text: #F4F3F1;
+      --muted: #BDBCC1;
+      --line: #2C2C33;
+      --accent-text: #FF8C4B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111114;
+    --card: #1E1E23;
+    --text: #F4F3F1;
+    --muted: #BDBCC1;
+    --line: #2C2C33;
+    --accent-text: #FF8C4B;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    overflow-wrap: break-word;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header.site { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  header.site .logo { width: 44px; height: 44px; flex: none; }
+  header.site a { color: inherit; text-decoration: none; font-weight: 800; font-size: 18px; }
+  h1 { font-size: 32px; line-height: 1.3; font-weight: 900; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lead { color: var(--muted); margin: 0 0 28px; }
+  .card { background: var(--card); border-radius: 28px; padding: 28px 24px; margin-bottom: 20px; }
+  h2 { font-size: 20px; font-weight: 900; margin: 0 0 12px; line-height: 1.4; }
+  h2 .num { display: inline-block; min-width: 2em; color: var(--accent-text); }
+  h3 { font-size: 16px; font-weight: 800; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 1.4em; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 800; white-space: nowrap; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-scroll table { min-width: 520px; }
+  .note { background: color-mix(in srgb, var(--sky) 22%, transparent); border-radius: 18px; padding: 14px 16px; margin: 12px 0; }
+  .toc { columns: 2; column-gap: 24px; padding-left: 1.2em; }
+  .toc li { break-inside: avoid; }
+  a { color: var(--accent-text); }
+  footer { color: var(--muted); font-size: 14px; margin-top: 32px; text-align: center; }
+  footer nav a { display: inline-block; margin: 0 8px 6px; }
+  @media (max-width: 520px) {
+    h1 { font-size: 26px; }
+    .card { padding: 22px 18px; border-radius: 24px; }
+    .toc { columns: 1; }
+  }
+</style>
+<style>
+  details { border-bottom: 1px solid var(--line); padding: 4px 0; }
+  details:last-child { border-bottom: none; }
+  summary {
+    cursor: pointer; list-style: none; font-weight: 800; padding: 12px 36px 12px 0; position: relative; line-height: 1.6;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; position: absolute; right: 4px; top: 8px; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--lime); color: #111114; font-weight: 900; text-align: center; line-height: 28px;
+  }
+  details[open] summary::after { content: "−"; }
+  details > div { padding: 0 0 14px; }
+  .contact {
+    background: #111114; color: #F4F3F1; border-radius: 28px; padding: 28px 24px; margin-bottom: 20px;
+  }
+  .contact h2 { color: #FFFFFF; }
+  .contact a.button {
+    display: inline-block; background: var(--lime); color: #111114; font-weight: 900; text-decoration: none;
+    border-radius: 999px; padding: 14px 24px; margin: 8px 0 12px; min-height: 44px;
+  }
+  .contact .small { color: #BDBCC1; font-size: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+  .chips a {
+    display: inline-block; background: var(--card); border-radius: 999px; padding: 8px 14px; text-decoration: none;
+    color: var(--text); font-weight: 700; font-size: 14px;
+  }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 36px; margin-bottom: 10px; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--accent); color: #FFFFFF; font-weight: 900; font-size: 13px; text-align: center; line-height: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <svg class="logo" viewBox="0 0 44 44" aria-hidden="true">
+      <ellipse cx="16" cy="25" rx="13" ry="12" fill="#FF6B1A"/>
+      <ellipse cx="28" cy="25" rx="13" ry="12" fill="#8FCBFF"/>
+      <path d="M22 31c-2.5-2-5-3.6-5-6.2 0-1.6 1.2-2.8 2.7-2.8 1 0 1.8.5 2.3 1.3.5-.8 1.3-1.3 2.3-1.3 1.5 0 2.7 1.2 2.7 2.8 0 2.6-2.5 4.2-5 6.2z" fill="#E8FF4D"/>
+      <ellipse cx="11" cy="23" rx="1.4" ry="2.4" fill="#111114"/><ellipse cx="15.5" cy="23" rx="1.4" ry="2.4" fill="#111114"/>
+      <ellipse cx="29" cy="23" rx="1.4" ry="2.4" fill="#111114"/><ellipse cx="33.5" cy="23" rx="1.4" ry="2.4" fill="#111114"/>
+    </svg>
+    <a href="support.html">Futamochi</a>
+  </header>
+
+  <h1>Support</h1>
+  <p class="lead">Thanks for using Futamochi! If something’s not working, check the FAQ below first. Still stuck? Get in touch using the contact info at the bottom of this page.</p>
+
+  <ul class="chips" aria-label="Topics">
+    <li><a href="#start">Getting started &amp; iCloud</a></li>
+    <li><a href="#pair">Connecting with your partner</a></li>
+    <li><a href="#device">Switching iPhones</a></li>
+    <li><a href="#widget">Widgets &amp; doodles</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#premium">Premium, canceling &amp; refunds</a></li>
+    <li><a href="#data">Deleting &amp; exporting data</a></li>
+    <li><a href="#privacy">Privacy &amp; safety</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </ul>
+
+  <div class="card" id="start">
+    <h2>Getting started &amp; iCloud</h2>
+    <details>
+      <summary>Do I need to create an account or log in?</summary>
+      <div><p>Nope. Futamochi saves your data with the iCloud account (Apple Account) you’re already signed in to on your iPhone. There’s no password to make up and no email address to register.</p></div>
+    </details>
+    <details>
+      <summary>Where is my data stored?</summary>
+      <div>
+        <p>Your photos, doodles, answers, memories, and everything else are stored in <strong>your own iCloud</strong> and shared only with the partner you’ve connected with. Nothing is stored on our servers, and we can’t see what’s inside.</p>
+        <p>A few things, like notifications and the strokes in “Doodle together,” pass through our relay server. Those are encrypted first with keys that only your two iPhones have, so we can’t read them.</p>
+        <p>For details, see our <a href="privacy_policy.html#s2">Privacy Policy</a>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>It says “Please sign in to iCloud”</summary>
+      <div>
+        <p>You need to be signed in to iCloud to use Futamochi.</p>
+        <ol class="steps">
+          <li>Open the Settings app on your iPhone and sign in at the top (“Apple Account” or “Sign in to your iPhone”).</li>
+          <li>Once you’re signed in, go to Settings &gt; [your name] &gt; iCloud and make sure iCloud is ready to use.</li>
+          <li>Head back to Futamochi. It’ll pick up right where you left off.</li>
+        </ol>
+        <p>Already signed in and still seeing this? Restart your iPhone, or go to Settings &gt; [your name] &gt; iCloud and check that Futamochi isn’t turned off in the list of apps using iCloud (the exact wording varies by iOS version).</p>
+        <p>Even without signing in to iCloud, you can tap “Try the demo” on the welcome screen to get a feel for the app with the sample couple. Nothing you do in the demo is saved.</p>
+      </div>
+    </details>
+    <details>
+      <summary>It says my iCloud storage is full</summary>
+      <div>
+        <p>Futamochi uses your iCloud storage. When it’s full, you can’t save or send new photos or doodles (nothing you already have gets deleted).</p>
+        <ul>
+          <li>Go to Settings &gt; [your name] &gt; iCloud &gt; Storage to see what’s taking up space, and delete photos or backups you don’t need.</li>
+          <li>Get more space with iCloud+ (the free plan includes 5 GB).</li>
+        </ul>
+        <p>For more, see Apple’s guide “<a href="https://support.apple.com/en-us/108922" target="_blank" rel="noopener">Manage iCloud storage on your Apple devices</a>.” Once there’s room again, anything that couldn’t be saved is sent again automatically.</p>
+      </div>
+    </details>
+    <details>
+      <summary>How much iCloud storage does it use?</summary>
+      <div><p>The app shrinks photos before saving them, so each one takes up just a few hundred KB (way smaller than the original). Text and answers barely use any space. What you create is stored in your iCloud and what your partner creates is stored in theirs, so your partner’s photos never eat into your storage.</p></div>
+    </details>
+    <details>
+      <summary>Can I use it if my partner has an Android phone?</summary>
+      <div><p>Sorry, no. Futamochi is iPhone-only and uses iCloud to save and share your data, so <strong>you both need an iPhone, each signed in to iCloud with your own Apple Account</strong>. There are no plans for an Android or web version right now.</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="pair">
+    <h2>Connecting with your partner</h2>
+    <details>
+      <summary>How do I connect with my partner?</summary>
+      <div>
+        <ol class="steps">
+          <li>One of you taps “Invite” on Home (or “Invite your partner” in My page).</li>
+          <li>Send the invite link to your partner with “Send via Messages,” “QR code,” “Copy link,” or “More options” (AirDrop and other apps). If you have LINE installed, you’ll see “Send via LINE” instead of Messages.</li>
+          <li>Your partner installs the app, then opens the link (for a QR code, they scan it with their iPhone camera). Once they tap “Join,” you two are connected.</li>
+        </ol>
+        <p>Connecting can take anywhere from a few seconds to about a minute. Only send the invite link to the person you want to connect with.</p>
+      </div>
+    </details>
+    <details>
+      <summary>I opened the invite link, but we’re not connecting</summary>
+      <div>
+        <ul>
+          <li>Install Futamochi from the App Store first, then open the link again.</li>
+          <li>Make sure you’re both signed in to iCloud.</li>
+          <li><strong>You can’t connect if you’re both using the same Apple Account.</strong> Each of you needs an iPhone signed in with your own Apple Account.</li>
+          <li>A link that’s already been used, or a partner who’s already connected with someone else, can’t be connected. Open the invite screen again and send a new link.</li>
+          <li>Update the app to the latest version.</li>
+          <li>If your connection is spotty, try again somewhere with better signal.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Can I use it without a partner?</summary>
+      <div><p>Tap “Try the demo” on Home or on the iCloud setup screen to see what Futamochi looks like once you’re connected, using the sample couple. The demo runs only on your iPhone: nothing is saved, and nothing reaches your partner (tap “Exit” on the banner at the top to leave anytime). To use Premium features like today’s question, doodles, and Daily Log together, connect with your partner and start the 7-day free trial on the Yearly plan (if you’re eligible).</p></div>
+    </details>
+    <details>
+      <summary>How do I disconnect? What happens when I do?</summary>
+      <div>
+        <p>In My page, tap the row with your partner’s name, then tap “Disconnect.” You don’t need your partner’s OK. Sharing stops for both of you right away.</p>
+        <ul>
+          <li>Anything you created stays in your iCloud, and only you can see it under “Earlier records” (you can delete it if you don’t need it).</li>
+          <li>Anything your partner created no longer shows up for you.</li>
+          <li>Your location is deleted right away.</li>
+          <li>Your partner doesn’t get a notification. They’ll see it the next time they open the app.</li>
+          <li>If the same two of you connect again, the records still in each of your iClouds are shared again.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="card" id="device">
+    <h2>Switching iPhones</h2>
+    <details>
+      <summary>What do I need to do when I get a new iPhone?</summary>
+      <div>
+        <p><strong>Nothing special.</strong> On your new iPhone, sign in to iCloud with <strong>the same Apple Account</strong> as before, install Futamochi, and open it. Your data comes back automatically, and you stay connected with your partner.</p>
+        <p>Text, answers, and similar data are encrypted with keys stored in iCloud Keychain, so make sure <strong>iCloud Keychain is turned on</strong> on your new iPhone too (Settings &gt; [your name] &gt; iCloud &gt; Passwords and Keychain; the wording varies by iOS version).</p>
+        <p>If you have lots of photos, it can take a little while for everything to show up. Staying on Wi-Fi helps.</p>
+        <p>On iPhone, you can use different Apple Accounts for iCloud (your data) and the App Store (your purchases). On your new iPhone, sign in to <strong>both iCloud and the App Store</strong> with the same Apple Accounts as before.</p>
+      </div>
+    </details>
+    <details>
+      <summary>I switched iPhones and my photos are there, but my text and answers aren’t</summary>
+      <div>
+        <p>Text, answers, locations, doodle strokes, and similar data are encrypted with keys stored in iCloud Keychain, so they won’t show up until iCloud Keychain is working on your new iPhone. Try these steps in order:</p>
+        <ol class="steps">
+          <li>When signing in on your new iPhone, if you’re asked for <strong>your old iPhone’s passcode</strong>, enter it (it’s used to bring over your iCloud Keychain keys).</li>
+          <li>Go to Settings &gt; [your name] &gt; iCloud and turn on <strong>iCloud Keychain (Passwords and Keychain)</strong>.</li>
+          <li>Close Futamochi and open it again.</li>
+        </ol>
+        <p><strong>Heads up</strong>: If you reset your end-to-end encrypted data during Apple Account recovery, this data can no longer be read, and neither Apple nor we can restore it. Before recovering your account, if you can, save a copy on your old iPhone with My page &gt; “Export data.”</p>
+      </div>
+    </details>
+    <details>
+      <summary>I switched to a different Apple Account and my data is gone</summary>
+      <div><p>Your data is stored in the iCloud of each Apple Account, so it can’t be moved to a different one. Sign back in with your previous Apple Account and your data will show up again.</p></div>
+    </details>
+    <details>
+      <summary>I got a new iPhone and Premium stopped working</summary>
+      <div>
+        <ul>
+          <li>If you bought it: Go to the Premium section of My page and tap “Restore Purchases.” You need to be signed in to the App Store with the same Apple Account you used to buy it.</li>
+          <li>If your partner bought it: It turns back on automatically once you’re connected again. If it’s still off after a while, ask your partner to open the app once.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="card" id="widget">
+    <h2>Widgets, doodles &amp; Live Activities</h2>
+    <details>
+      <summary>How do I add a widget to my Home Screen?</summary>
+      <div>
+        <ol class="steps">
+          <li>Touch and hold an empty spot on your Home Screen.</li>
+          <li>Tap “Edit” in the top-left corner, then “Add Widget.”</li>
+          <li>Search for “Futamochi,” pick the widget and size you like, and tap “Add Widget.”</li>
+        </ol>
+        <p>There’s also an animated walkthrough in the app under My page &gt; “Widgets.”</p>
+      </div>
+    </details>
+    <details>
+      <summary>How do I add a widget to my Lock Screen?</summary>
+      <div>
+        <ol class="steps">
+          <li>Touch and hold your Lock Screen, tap “Customize,” then choose “Lock Screen.”</li>
+          <li>Tap the area below (or above) the clock and pick a Futamochi widget.</li>
+        </ol>
+        <p>iOS shows Lock Screen widgets in a single color. To see doodles in full color, use a Home Screen widget.</p>
+      </div>
+    </details>
+    <details>
+      <summary>My widget doesn’t update right away</summary>
+      <div>
+        <p>iOS limits how often widgets refresh to save battery, so updates can take a little while. Try these:</p>
+        <ul>
+          <li>Open the app (it refreshes to the latest when you do).</li>
+          <li>Allow notifications in Settings &gt; Notifications &gt; Futamochi (widgets also refresh when a notification arrives).</li>
+          <li>Turn off Low Power Mode.</li>
+          <li>Turn on Settings &gt; General &gt; Background App Refresh.</li>
+          <li>Still not working? Remove the widget and add it again.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Can I set a doodle as my partner’s Lock Screen wallpaper directly?</summary>
+      <div>
+        <p>iOS doesn’t let apps change your wallpaper directly. But here’s how you can still get doodles on the Lock Screen:</p>
+        <ul>
+          <li><strong>Lock Screen widget</strong>: Shows the doodles you receive.</li>
+          <li><strong>Doodle time together</strong>: While it’s on, your partner’s doodles show up in color on your Lock Screen and in the Dynamic Island.</li>
+          <li><strong>Wallpaper export</strong>: Save doodles and photos to Photos at iPhone wallpaper size. Pair it with the Shortcuts app’s wallpaper action to set your latest doodle as your wallpaper automatically.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Doodles aren’t showing on my Lock Screen (Live Activity)</summary>
+      <div>
+        <ul>
+          <li>Doodles appear on the Lock Screen and in the Dynamic Island <strong>only while “Doodle time together” is on</strong>. Start it from My page &gt; “Widgets” &gt; “Start doodle time” (or “Doodle time” in Control Center) and choose how long (up to 8 hours).</li>
+          <li>Check that Settings &gt; Futamochi &gt; Live Activities is turned on.</li>
+          <li>Doodles that arrive after it ends can be seen in your widgets and in the app.</li>
+          <li>The Dynamic Island only appears on iPhones that have one.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>How do I send “Miss you” without opening the app?</summary>
+      <div><p>Put the “Your partner now” widget on your Home Screen or the “Miss You button” widget on your Lock Screen, and just tap the button to send “Miss you” and more without opening the app. On iOS 18 or later, you can also add “Send ‘Miss you’” to Control Center. If your iPhone is locked, it’s sent after you unlock it.</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="features">
+    <h2>Features</h2>
+    <details>
+      <summary>How are our days together counted?</summary>
+      <div><p>By default, the day you got together counts as day 1. To start counting from day 0 instead, turn off “Count day one as day 1” in My page &gt; “Couple settings.” Every-100-days milestones, monthly anniversaries, and yearly anniversaries are calculated automatically, and you’ll get a heads-up when they come around.</p></div>
+    </details>
+    <details>
+      <summary>I can’t see my partner’s answer to today’s question</summary>
+      <div><p>You get to see your partner’s answer <strong>after you’ve answered the same question yourself</strong>. If your partner hasn’t answered yet, we’ll send you a notification when they do.</p></div>
+    </details>
+    <details>
+      <summary>When does a new day start in Daily Log?</summary>
+      <div><p>So late nights still count as one day, a day in Daily Log runs <strong>from 4 AM to 4 AM the next morning</strong>.</p></div>
+    </details>
+    <details>
+      <summary>The distance between us isn’t showing</summary>
+      <div>
+        <ul>
+          <li>You both need to turn on My page &gt; “Location &amp; distance” &gt; “Share location” (it’s off by default).</li>
+          <li>In Settings &gt; Futamochi &gt; Location, choose “While Using the App.”</li>
+          <li>If it’s been more than 24 hours since a location was last updated, you’ll see “No recent location.” Opening the app updates it.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="card" id="premium">
+    <h2>Premium, canceling &amp; refunds</h2>
+    <details>
+      <summary>Do I need Premium to use the app?</summary>
+      <div><p>Most of Futamochi’s features come with Premium (paid). The Yearly plan includes a 7-day free trial for eligible users, so give it a try first. (Unless you cancel at least 24 hours before the trial ends, it automatically becomes a paid Yearly subscription. See “What happens after the free trial?” below.) Without Premium, you can still use the days-together counter and its widget, your list of special days, connecting with your partner, settings, Restore Purchases, exporting and deleting your data, and contacting us.</p></div>
+    </details>
+    <details>
+      <summary>If one of us buys Premium, do we both get it?</summary>
+      <div><p>Yep. When one of you buys it, your connected partner gets Premium too at no extra cost. Your partner’s screen shows “Using [name]’s Premium.” If you disconnect, or the buyer’s Premium ends, your partner’s access ends too.</p></div>
+    </details>
+    <details>
+      <summary>My partner bought Premium, but I don’t have it</summary>
+      <div>
+        <ul>
+          <li>Make sure you two are connected.</li>
+          <li>Ask your partner to open the app once on their iPhone (the purchase info is saved to their iCloud and then checked on your iPhone).</li>
+          <li>It can take a little while to kick in. Try closing and reopening the app.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>We both accidentally bought it</summary>
+      <div><p>If the app notices you’re both subscribed, it’ll let you know. Turn off auto-renewal for one of you (see “How do I cancel?” below). Whoever cancels can keep using it until the current period ends. Refunds for the double charge are requested from Apple. To help avoid this, the app doesn’t open the purchase screen if your partner already has Premium.</p></div>
+    </details>
+    <details>
+      <summary>What happens after the free trial?</summary>
+      <div><p>When your free trial ends, it automatically becomes a paid subscription. The date billing starts is shown on the purchase screen. If you don’t want to be charged, cancel at least 24 hours before the trial ends, using the steps below. You can keep using Premium until the trial period is over, even after canceling.</p></div>
+    </details>
+    <details>
+      <summary>How do I cancel (turn off auto-renewal)?</summary>
+      <div>
+        <ol class="steps">
+          <li>Open the Settings app on your iPhone and tap your name at the top.</li>
+          <li>Tap “Subscriptions.”</li>
+          <li>Choose “Futamochi” and tap “Cancel Subscription.”</li>
+        </ol>
+        <p>You can also get there from the Premium section of My page &gt; “Manage Subscription.” If you cancel at least 24 hours before the current period ends, it won’t renew. You can keep using Premium until the end of the period. <strong>Deleting the app doesn’t cancel your subscription.</strong> If your partner bought it, they need to cancel on their iPhone. For more, see Apple’s guide “<a href="https://support.apple.com/en-us/118428" target="_blank" rel="noopener">If you want to cancel a subscription from Apple</a>.”</p>
+      </div>
+    </details>
+    <details>
+      <summary>I’d like a refund</summary>
+      <div>
+        <p>Apple collects payment for in-app purchases, so refunds are requested from Apple. We’re not able to issue refunds ourselves. Thanks for understanding.</p>
+        <p>To find out how, see Apple’s guide “<a href="https://support.apple.com/en-us/118223" target="_blank" rel="noopener">Request a refund for apps or content that you bought from Apple</a>” (you can request one at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>).</p>
+      </div>
+    </details>
+    <details>
+      <summary>Where can I find pricing and the seller’s details?</summary>
+      <div><p>Prices are shown on the purchase screen in the app (every plan covers both of you). The seller, when you’re charged, cancellation terms, and other details are listed in our <a href="tokushoho.html">Legal Notice (Act on Specified Commercial Transactions)</a>.</p></div>
+    </details>
+    <details>
+      <summary>Can I see the welcome gift again?</summary>
+      <div><p>The welcome gift is a limited-time discount that’s available for only 24 hours after it first appears. Once it expires, it can’t be shown again. Sorry about that! It also isn’t shown to people who joined through an invite (if your partner buys Premium, you get it at no extra cost).</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="data">
+    <h2>Deleting &amp; exporting data</h2>
+    <details>
+      <summary>How do I delete all my data?</summary>
+      <div>
+        <p>Go to My page &gt; “Delete all Futamochi data” to delete Futamochi’s data from your iCloud.</p>
+        <ul>
+          <li>Photos, answers, special days, memories, comments, and anything else you created also disappear from your partner’s screen.</li>
+          <li>Sharing with your partner stops.</li>
+          <li>This can’t be undone. Save anything you want to keep with “Export data” first.</li>
+          <li>If your partner was using Premium through your purchase, they lose access.</li>
+          <li><strong>Deleting your data doesn’t cancel your subscription.</strong> Cancel first, using the steps in “How do I cancel?”</li>
+        </ul>
+        <p>If Futamochi appears under Settings &gt; [your name] &gt; iCloud &gt; Storage on your iPhone, you can delete it from there too.</p>
+      </div>
+    </details>
+    <details>
+      <summary>If I delete the app, is my data deleted too?</summary>
+      <div><p>No. Your data stays in your iCloud, so it comes back if you reinstall the app. If you want to delete your data too, use My page &gt; “Delete all Futamochi data” before deleting the app.</p></div>
+    </details>
+    <details>
+      <summary>I want to delete something my partner created</summary>
+      <div><p>Things your partner created are stored in their iCloud, so you can’t delete them. Ask your partner to delete them, or disconnect so they no longer show up for you.</p></div>
+    </details>
+    <details>
+      <summary>I want to export my data</summary>
+      <div><p>Go to My page &gt; “Export data” to export your memories, answers, and other data.</p></div>
+    </details>
+    <details>
+      <summary>Can you restore my data for me?</summary>
+      <div><p>We can’t see or restore what’s in your iCloud or your partner’s. Deleted data can’t be recovered, so please be careful.</p></div>
+    </details>
+  </div>
+
+  <div class="card" id="privacy">
+    <h2>Privacy &amp; safety</h2>
+    <details>
+      <summary>Can other people see the photos and answers I post?</summary>
+      <div><p>In Futamochi, only two people can see them: you and the partner you’re connected with. There’s no public feed and no way to connect with strangers. We can’t see your content either. That said, your partner can save things, for example by taking a screenshot. For details, see our <a href="privacy_policy.html">Privacy Policy</a>.</p></div>
+    </details>
+    <details>
+      <summary>Are there ads or tracking?</summary>
+      <div><p>No. We don’t show ads, and we don’t combine your data with other companies’ data for advertising (tracking).</p></div>
+    </details>
+    <details>
+      <summary>If I share my location, what can my partner see?</summary>
+      <div><p>Your partner’s app shows <strong>only the distance between you two and when it was last updated</strong>. No spot on a map, and no location history. Your location is rounded on your iPhone before it’s saved: to about 1 km (0.6 mi) with the rougher setting (the default), or to about 100 m (330 ft) with the more precise one. You can turn sharing off anytime, and turning it off also deletes your saved location.</p><p>Keep in mind that combining the distance with your partner’s own location could reveal roughly where you are. If that worries you, choose the rougher setting or turn sharing off.</p></div>
+    </details>
+    <details>
+      <summary>I don’t want content showing in notifications or on my Lock Screen</summary>
+      <div>
+        <ul>
+          <li>Set Settings &gt; Notifications &gt; Futamochi &gt; Show Previews to “Never” to hide the text of notifications.</li>
+          <li>To remove a Futamochi widget from your Lock Screen, customize your Lock Screen and take it off.</li>
+          <li>“Doodle time together” only appears on the Lock Screen if you start it. While it’s on, you can stop it anytime with “End” in the app.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>My partner is treating me badly, or I’m having trouble</summary>
+      <div>
+        <p>In My page, tap the row with your partner’s name, then tap “Disconnect” to cut ties right away. Once you disconnect, you won’t get any more posts or notifications from them. They don’t get a notification.</p>
+        <p>If there’s something about how Futamochi is being used that you want us to know, contact us from My page &gt; “Contact &amp; report” (choose “Reports &amp; safety concerns”) or at the email address below. We’ll review it and take action under our <a href="terms.html">Terms of Use</a>.</p>
+        <div class="note">
+          <p>If you’re in immediate danger, call your local emergency number (911 in the US).</p>
+          <p>If you’re dealing with abuse from a partner, you don’t have to handle it alone. In the US, free, confidential help is available 24/7:</p>
+          <ul>
+            <li>National Domestic Violence Hotline: call <a href="tel:18007997233">1-800-799-7233</a> or text START to <a href="sms:88788">88788</a></li>
+            <li>988 Suicide &amp; Crisis Lifeline: call or text <a href="tel:988">988</a></li>
+          </ul>
+          <p>Outside the US, please reach out to your local emergency services or a domestic violence support organization near you. You can also find these resources in the app: My page &gt; “Contact &amp; report” &gt; “Where to get help.”</p>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>Contact us</h2>
+    <p>If the FAQ didn’t help, feel free to email us. Sending from My page &gt; “Contact &amp; report” in the app automatically fills in your iPhone model and app version, which makes things faster.</p>
+    <a class="button" href="mailto:contact@crop.tokyo?subject=Futamochi%20support">Email us</a>
+    <p>If you can, please include:</p>
+    <ul>
+      <li>What’s going wrong (when, on which screen, what you did, and what happened)</li>
+      <li>Your iPhone model and iOS version</li>
+      <li>The app version (shown next to “About this app” at the bottom of My page)</li>
+      <li>A screenshot, if you have one</li>
+    </ul>
+    <p class="small">It may take a few days for us to reply. We can’t see your data, so we’ll answer based on what you tell us in your email. Please don’t include passwords, Apple Account details, or credit card numbers in your email. We’ll never ask for them.</p>
+    <p class="small">CROP, K.K. · Look Heights Shinjuku 803, 5-18-20 Shinjuku, Shinjuku-ku, Tokyo, Japan · <a href="mailto:contact@crop.tokyo" style="color:#E8FF4D">contact@crop.tokyo</a></p>
+  </div>
+
+  <footer>
+    <nav><a href="terms.html">Terms of Use</a><a href="privacy_policy.html">Privacy Policy</a><a href="tokushoho.html">Legal Notice (Act on Specified Commercial Transactions)</a><a href="support.html">Support</a></nav>
+    <p>© CROP, K.K.</p>
+  </footer>
+</div>
+</body>
+</html>
